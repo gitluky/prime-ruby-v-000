@@ -7,7 +7,7 @@ def prime?(maybe_prime)
   epsilon = 0.001 #set epislon - acceptable margin of error
   guess_low = 1.0 #low_range of guessing
   guess_high = maybe_prime #high range of guessing
-  answer = (guess_low+guess_high)/2.0 #start guessing in the middle, remove half the guesses each time the guess fails
+  answer = (guess_low+guess_high)/2.0 #start guessing in the middle so we can remove half the guesses each time the guess fails
   while (answer**2 - maybe_prime).abs >= epsilon
     if answer**2 < maybe_prime #if guess is too low, delete all possibilities below the guess, set the prev guess as low point
       guess_low = answer
